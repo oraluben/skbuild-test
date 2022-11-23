@@ -8,7 +8,7 @@ find_package(PythonExtensions REQUIRED)
 add_compile_definitions(Py_BUILD_CORE)  # for sizeof(PyGC_Head)
 add_compile_definitions(NEED_OPCODE_TABLES)  # _PyOpcode_Caches and _PyOpcode_Deopt
 
-add_library(skbuild_test src/skbuild_test/library.cpp)
+add_library(skbuild_test MODULE src/skbuild_test/library.cpp)
 python_extension_module(skbuild_test)
 
 install(TARGETS skbuild_test LIBRARY DESTINATION "${PYTHON_RELATIVE_SITE_PACKAGES_DIR}")

@@ -19,5 +19,7 @@ PyInit_skbuild_test(void) {
 
     m = PyModule_Create(&module);
 
+    Py_INCREF(Py_None);
+
     return m;
 }
