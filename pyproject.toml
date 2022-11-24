@@ -6,3 +6,4 @@ testpaths = ["tests"]
 
 [tool.cibuildwheel]
 build = "cp311-*"
+archs = ["native"]
