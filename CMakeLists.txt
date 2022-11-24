@@ -5,8 +5,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 find_package(PythonExtensions REQUIRED)
 
-add_compile_definitions(Py_BUILD_CORE)  # for sizeof(PyGC_Head)
-add_compile_definitions(NEED_OPCODE_TABLES)  # _PyOpcode_Caches and _PyOpcode_Deopt
+add_compile_definitions(Py_BUILD_CORE)
 
 add_library(skbuild_test MODULE src/skbuild_test/library.cpp)
 python_extension_module(skbuild_test)
